@@ -13,7 +13,7 @@ challenges = {
     'january': 'I am January',
     'february': 'I am february',
     'march': 'I am march',
-    'april': 'I am april',
+    'april': 'I am April',
     'may': 'I am may',
     'june': 'I am june',
     'july': 'I am july',
@@ -49,7 +49,9 @@ def monthly_challenges_numbers(request, month):
 def monthly_challenges(request, month):
     try:
         challenge_text = challenges[month]
-        return_data = f"<h1>{challenge_text}</h1>"
-        return HttpResponse(return_data)
+        return render(request, "challenges/challenge.html", {
+            "text": challenge_text,
+            "month": month.capitalize()
+        })
     except:
         return HttpResponseNotFound("<h1>This month is not supported!</h1>")
