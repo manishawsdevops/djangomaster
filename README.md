@@ -17,7 +17,7 @@ https://github.com/academind/django-practical-guide-course-code
 
 # Templates and Static files.
 
-Interpolation
+Interpolation - {{ ... }}
 
 
 
