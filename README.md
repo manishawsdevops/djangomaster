@@ -20,5 +20,11 @@ https://github.com/academind/django-practical-guide-course-code
 Interpolation - {{ ... }}
 
 
+--------------------------
+
+Creating new Project:
+
+Commands:
+django-admin startproject my_site
 
 
